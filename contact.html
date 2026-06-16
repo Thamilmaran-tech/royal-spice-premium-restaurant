@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Royal Spice Restaurant</title>
+  <meta name="description" content="Get in touch with Royal Spice Restaurant. Find our location coordinates, telephone numbers, emails, and operating hours, or send us a message directly.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-custom-accent ripple py-2 px-4" href="reservation.html">Book Table</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="section-padding bg-dark text-center text-white position-relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920') center/cover no-repeat; padding: 100px 0;">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-2">Connect With Us</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Contact Body Section -->
+  <section class="section-padding bg-white-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Sidebar Info & Hours (Col-lg-5) -->
+        <div class="col-lg-5 animate slide-left show-anim">
+          <h2 class="h3 font-display mb-4 text-warning">Contact Information</h2>
+          <ul class="contact-info-list mb-5">
+            <li class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-text">
+                <h5>Our Location</h5>
+                <p>350 5th Ave, New York, NY 10118, United States</p>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-info-text">
+                <h5>Telephone Contacts</h5>
+                <p>Office: +1 (234) 567-8910<br>Delivery: +1 (234) 567-8911</p>
+              </div>
+            </li>
+            <li class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-info-text">
+                <h5>Email Correspondence</h5>
+                <p>info@royalspicerestaurant.com<br>support@royalspicerestaurant.com</p>
+              </div>
+            </li>
+          </ul>
+
+          <h2 class="h3 font-display mb-4 text-warning">Opening Hours</h2>
+          <div class="p-4 bg-light rounded-4 border">
+            <table class="table table-sm table-borderless mb-0" style="color: var(--text-color);">
+              <tbody>
+                <tr class="border-bottom border-light">
+                  <td class="ps-0 py-2">Monday - Friday:</td>
+                  <td class="pe-0 py-2 text-end fw-semibold">11:00 AM - 10:00 PM</td>
+                </tr>
+                <tr class="border-bottom border-light">
+                  <td class="ps-0 py-2">Saturday:</td>
+                  <td class="pe-0 py-2 text-end fw-semibold">10:30 AM - 11:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="ps-0 py-2">Sunday:</td>
+                  <td class="pe-0 py-2 text-end fw-semibold text-danger">Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Contact Form Column (Col-lg-7) -->
+        <div class="col-lg-7 animate slide-right show-anim">
+          <div class="p-4 border rounded-4 bg-card-custom shadow-sm">
+            <h2 class="h3 font-display mb-4">Send Us a Message</h2>
+            
+            <div id="contact-alert"></div>
+
+            <form id="contact-form" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <!-- Name -->
+                <div class="col-md-6">
+                  <label for="contact-name" class="form-label-custom">Your Name *</label>
+                  <input type="text" class="form-control form-control-custom" id="contact-name" required placeholder="E.g. Sophia Mitchell">
+                  <div class="invalid-feedback">Please input your name.</div>
+                </div>
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="contact-email" class="form-label-custom">Email Address *</label>
+                  <input type="email" class="form-control form-control-custom" id="contact-email" required placeholder="sophia@example.com">
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <!-- Subject -->
+                <div class="col-12">
+                  <label for="contact-subject" class="form-label-custom">Subject *</label>
+                  <input type="text" class="form-control form-control-custom" id="contact-subject" required placeholder="E.g. Table customization inquiry, private catering">
+                  <div class="invalid-feedback">Please fill in the subject.</div>
+                </div>
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="contact-message" class="form-label-custom">Your Message *</label>
+                  <textarea class="form-control form-control-custom" id="contact-message" rows="5" required placeholder="Type your detailed message here..."></textarea>
+                  <div class="invalid-feedback">Please write a message.</div>
+                </div>
+                <!-- Submit -->
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-custom-primary ripple"><i class="fas fa-paper-plane me-2"></i>Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Embed Section -->
+  <section class="section-padding bg-light-section pt-0">
+    <div class="container">
+      <div class="map-container animate zoom-in show-anim">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.428414605994!2d-73.98701992415174!3d40.751381671387635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Empire State Building"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section-padding pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-logo" href="index.html">
+            <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+          </a>
+          <p class="text-muted pe-lg-4">Experience unforgettable dining with authentic flavors and premium ingredients, crafted by culinary experts with love.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Starters</a></li>
+            <li><a href="menu.html">Main Courses</a></li>
+            <li><a href="menu.html">Seafood Platter</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+            <li><a href="menu.html">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="text-muted mb-4">Subscribe to our newsletter to receive updates on special events and menu offers.</p>
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Your Email Address" required aria-label="Email for newsletter">
+            <button class="btn" type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="current-year"></span> Royal Spice Restaurant. All Rights Reserved. Designed with Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

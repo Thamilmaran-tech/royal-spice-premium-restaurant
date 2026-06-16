@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & News | Royal Spice Restaurant</title>
+  <meta name="description" content="Read our culinary guides, recipe secrets, organic sourcing logs, and kitchen events at Royal Spice Restaurant's official blog.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-custom-accent ripple py-2 px-4" href="reservation.html">Book Table</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="section-padding bg-dark text-center text-white position-relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920') center/cover no-repeat; padding: 100px 0;">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-2">Our Culinary Stories</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Blog</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Blog Content Section -->
+  <section class="section-padding bg-white-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Sidebar Column (Col-lg-3) -->
+        <div class="col-lg-3 order-lg-2 animate slide-right show-anim">
+          <!-- Search Widget -->
+          <div class="p-4 border rounded-4 bg-light mb-4">
+            <h3 class="h5 font-display text-warning mb-3">Search Posts</h3>
+            <div class="input-group">
+              <input type="text" id="blog-search" class="form-control form-control-custom bg-white" placeholder="Keyword..." aria-label="Search blog posts">
+              <button class="btn btn-warning text-white" type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="p-4 border rounded-4 bg-light mb-4">
+            <h3 class="h5 font-display text-warning mb-3">Post Categories</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2 pb-2 border-bottom"><a href="#" class="blog-cat-link text-decoration-none text-secondary active text-warning" data-cat="all">All Stories</a></li>
+              <li class="mb-2 pb-2 border-bottom"><a href="#" class="blog-cat-link text-decoration-none text-secondary" data-cat="secrets">Culinary Secrets</a></li>
+              <li class="mb-2 pb-2 border-bottom"><a href="#" class="blog-cat-link text-decoration-none text-secondary" data-cat="sourcing">Organic Sourcing</a></li>
+              <li class="mb-2 pb-2 border-bottom"><a href="#" class="blog-cat-link text-decoration-none text-secondary" data-cat="guides">Culinary Guides</a></li>
+              <li class="mb-2 pb-2 border-bottom"><a href="#" class="blog-cat-link text-decoration-none text-secondary" data-cat="desserts">Dessert Science</a></li>
+              <li class="mb-0"><a href="#" class="blog-cat-link text-decoration-none text-secondary" data-cat="events">Events Highlights</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Main Blog Feed Grid (Col-lg-9) -->
+        <div class="col-lg-9 order-lg-1">
+          <div class="row g-4" id="blog-posts-grid">
+            <!-- 1. Spice Secrets -->
+            <div class="col-md-6 blog-post-col animate slide-up show-anim" data-category="secrets">
+              <div class="restaurant-card">
+                <div class="card-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=500" alt="Indian Spices">
+                  <span class="card-badge bg-warning text-white">Secrets</span>
+                </div>
+                <div class="card-body-custom">
+                  <span class="small text-muted"><i class="far fa-calendar-alt me-1"></i>June 12, 2026 | By Chef Arjun</span>
+                  <h3 class="card-title-custom h5 mt-2">The Art of Blending Royal Spices</h3>
+                  <p class="card-desc">Discover how roasting and stone-grinding whole cardamoms, star anise, and cinnamon cloves unlocks deep layers of taste in traditional curries.</p>
+                </div>
+                <div class="card-footer-custom bg-transparent border-0 pt-0">
+                  <a href="#" class="text-warning text-decoration-none fw-semibold">Read Full Article <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Organic Sourcing -->
+            <div class="col-md-6 blog-post-col animate slide-up show-anim" data-category="sourcing" style="animation-delay: 0.1s;">
+              <div class="restaurant-card">
+                <div class="card-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=500" alt="Organic farming">
+                  <span class="card-badge bg-warning text-white">Sourcing</span>
+                </div>
+                <div class="card-body-custom">
+                  <span class="small text-muted"><i class="far fa-calendar-alt me-1"></i>June 08, 2026 | By Sarah Jenkins</span>
+                  <h3 class="card-title-custom h5 mt-2">Why Traceable Sourcing Matters</h3>
+                  <p class="card-desc">A deep dive into our verified farm partners program, exploring how buying clean organic produce ensures toxic pesticide-free dining experiences.</p>
+                </div>
+                <div class="card-footer-custom bg-transparent border-0 pt-0">
+                  <a href="#" class="text-warning text-decoration-none fw-semibold">Read Full Article <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Wine Pairings -->
+            <div class="col-md-6 blog-post-col animate slide-up show-anim" data-category="guides" style="animation-delay: 0.2s;">
+              <div class="restaurant-card">
+                <div class="card-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=500" alt="Wine Glass">
+                  <span class="card-badge bg-warning text-white">Guides</span>
+                </div>
+                <div class="card-body-custom">
+                  <span class="small text-muted"><i class="far fa-calendar-alt me-1"></i>June 03, 2026 | By Olivia Brown</span>
+                  <h3 class="card-title-custom h5 mt-2">5 Premium Wine Pairings for Spicy Dishes</h3>
+                  <p class="card-desc">Pairing robust Cabernet or sweet Riesling wines with rich butter chicken and seafood platters to highlight aromatic spice undertones.</p>
+                </div>
+                <div class="card-footer-custom bg-transparent border-0 pt-0">
+                  <a href="#" class="text-warning text-decoration-none fw-semibold">Read Full Article <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Cake Science -->
+            <div class="col-md-6 blog-post-col animate slide-up show-anim" data-category="desserts" style="animation-delay: 0.3s;">
+              <div class="restaurant-card">
+                <div class="card-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=500" alt="Chocolate cake">
+                  <span class="card-badge bg-warning text-white">Desserts</span>
+                </div>
+                <div class="card-body-custom">
+                  <span class="small text-muted"><i class="far fa-calendar-alt me-1"></i>May 28, 2026 | By Pierre Dubois</span>
+                  <h3 class="card-title-custom h5 mt-2">The Physics of Molten Center Lava Cakes</h3>
+                  <p class="card-desc">Pastry Chef Pierre Dubois explains how precise temperature gradients prevent the center batter of molten cakes from cooking through.</p>
+                </div>
+                <div class="card-footer-custom bg-transparent border-0 pt-0">
+                  <a href="#" class="text-warning text-decoration-none fw-semibold">Read Full Article <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Kitchen Scenes -->
+            <div class="col-md-6 blog-post-col animate slide-up show-anim" data-category="events">
+              <div class="restaurant-card">
+                <div class="card-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=500" alt="Kitchen operations">
+                  <span class="card-badge bg-warning text-white">Events</span>
+                </div>
+                <div class="card-body-custom">
+                  <span class="small text-muted"><i class="far fa-calendar-alt me-1"></i>May 22, 2026 | By Marcus Thompson</span>
+                  <h3 class="card-title-custom h5 mt-2">Behind Saturday's Dinner Service Rush</h3>
+                  <p class="card-desc">An exciting photo documentary showcasing how line chefs, dishwashers, and hosts interact in perfect rhythm during high volume hours.</p>
+                </div>
+                <div class="card-footer-custom bg-transparent border-0 pt-0">
+                  <a href="#" class="text-warning text-decoration-none fw-semibold">Read Full Article <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Tandoor vs Grill -->
+            <div class="col-md-6 blog-post-col animate slide-up show-anim" data-category="guides" style="animation-delay: 0.1s;">
+              <div class="restaurant-card">
+                <div class="card-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=500" alt="Grill Master">
+                  <span class="card-badge bg-warning text-white">Guides</span>
+                </div>
+                <div class="card-body-custom">
+                  <span class="small text-muted"><i class="far fa-calendar-alt me-1"></i>May 15, 2026 | By Chef Marcus Vance</span>
+                  <h3 class="card-title-custom h5 mt-2">Traditional Clay Tandoor vs Steel Grills</h3>
+                  <p class="card-desc">Comparing heat radiation patterns and charcoal smoke infusion differences between traditional clay pits and open barbecues.</p>
+                </div>
+                <div class="card-footer-custom bg-transparent border-0 pt-0">
+                  <a href="#" class="text-warning text-decoration-none fw-semibold">Read Full Article <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <nav aria-label="Blog pagination" class="mt-5 animate slide-up show-anim">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+              <li class="page-item active" aria-current="page"><a class="page-link bg-warning border-warning text-white" href="#">1</a></li>
+              <li class="page-item"><a class="page-link text-warning" href="#">2</a></li>
+              <li class="page-item"><a class="page-link text-warning" href="#">3</a></li>
+              <li class="page-item"><a class="page-link text-warning" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section-padding pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-logo" href="index.html">
+            <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+          </a>
+          <p class="text-muted pe-lg-4">Experience unforgettable dining with authentic flavors and premium ingredients, crafted by culinary experts with love.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Starters</a></li>
+            <li><a href="menu.html">Main Courses</a></li>
+            <li><a href="menu.html">Seafood Platter</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+            <li><a href="menu.html">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="text-muted mb-4">Subscribe to our newsletter to receive updates on special events and menu offers.</p>
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Your Email Address" required aria-label="Email for newsletter">
+            <button class="btn" type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="current-year"></span> Royal Spice Restaurant. All Rights Reserved. Designed with Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

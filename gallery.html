@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Royal Spice Restaurant</title>
+  <meta name="description" content="View beautiful high-resolution photographs of our food creations, elegant restaurant interior, bar, and special catering events.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-custom-accent ripple py-2 px-4" href="reservation.html">Book Table</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="section-padding bg-dark text-center text-white position-relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920') center/cover no-repeat; padding: 100px 0;">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-2">Our Visual Experience</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Gallery Grid Section -->
+  <section class="section-padding bg-white-section">
+    <div class="container">
+      <!-- Filter controls -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="d-flex flex-wrap justify-content-center" id="gallery-filters">
+            <button class="menu-filter-btn gallery-filter-btn active ripple" data-filter="all">All Photos</button>
+            <button class="menu-filter-btn gallery-filter-btn ripple" data-filter="food">Gourmet Food</button>
+            <button class="menu-filter-btn gallery-filter-btn ripple" data-filter="interior">Interior & Dining</button>
+            <button class="menu-filter-btn gallery-filter-btn ripple" data-filter="events">Special Events</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Masonry-like Flex/Grid -->
+      <div class="row g-4" id="gallery-grid">
+        <!-- Image 1 - Food -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="food">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800" alt="Saffron Chicken Biryani">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Saffron Chicken Biryani</h3>
+              <span class="gallery-item-category">Gourmet Food</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 2 - Interior -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="interior">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800" alt="Fine Dining Area">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Fine Dining Area</h3>
+              <span class="gallery-item-category">Interior & Dining</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 3 - Events -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="events">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1529543642868-f9a000c17482?q=80&w=800" alt="Private Banquet Event">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Private Banquet Event</h3>
+              <span class="gallery-item-category">Special Events</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 4 - Food -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="food">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=800" alt="Royal Butter Chicken">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Royal Butter Chicken</h3>
+              <span class="gallery-item-category">Gourmet Food</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 5 - Interior -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="interior">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800" alt="Cozy Cafe Seating">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Cozy Seating Corner</h3>
+              <span class="gallery-item-category">Interior & Dining</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 6 - Events -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="events">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800" alt="Candlelight Birthday Party">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Candlelight Celebration</h3>
+              <span class="gallery-item-category">Special Events</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 7 - Food -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="food">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=800" alt="Creamy Pasta Alfredo">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Creamy Pasta Alfredo</h3>
+              <span class="gallery-item-category">Gourmet Food</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 8 - Interior -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="interior">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=800" alt="Artisanal Beverage Bar">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Artisanal Beverage Bar</h3>
+              <span class="gallery-item-category">Interior & Dining</span>
+            </div>
+          </div>
+        </div>
+        <!-- Image 9 - Food -->
+        <div class="col-lg-4 col-md-6 gallery-item-col" data-category="food">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800" alt="Molten Lava Dessert">
+            <div class="gallery-item-overlay">
+              <h3 class="gallery-item-title">Molten Lava Dessert</h3>
+              <span class="gallery-item-category">Gourmet Food</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+      <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="section-padding pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-logo" href="index.html">
+            <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+          </a>
+          <p class="text-muted pe-lg-4">Experience unforgettable dining with authentic flavors and premium ingredients, crafted by culinary experts with love.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Starters</a></li>
+            <li><a href="menu.html">Main Courses</a></li>
+            <li><a href="menu.html">Seafood Platter</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+            <li><a href="menu.html">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="text-muted mb-4">Subscribe to our newsletter to receive updates on special events and menu offers.</p>
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Your Email Address" required aria-label="Email for newsletter">
+            <button class="btn" type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="current-year"></span> Royal Spice Restaurant. All Rights Reserved. Designed with Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

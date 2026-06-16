@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu | Royal Spice Restaurant</title>
+  <meta name="description" content="Explore our extensive menu featuring hand-cooked Starters, Main Courses, Seafood, Desserts, and Cocktails at Royal Spice Restaurant.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-custom-accent ripple py-2 px-4" href="reservation.html">Book Table</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="section-padding bg-dark text-center text-white position-relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1920') center/cover no-repeat; padding: 100px 0;">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-2">Our Culinary Creations</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Menu Filtering Section -->
+  <section class="section-padding bg-white-section">
+    <div class="container">
+      <!-- Search & Filters bar -->
+      <div class="row mb-5 align-items-center">
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start" id="menu-filters">
+            <button class="menu-filter-btn active ripple" data-filter="all">All Items</button>
+            <button class="menu-filter-btn ripple" data-filter="starters">Starters</button>
+            <button class="menu-filter-btn ripple" data-filter="soups">Soups</button>
+            <button class="menu-filter-btn ripple" data-filter="salads">Salads</button>
+            <button class="menu-filter-btn ripple" data-filter="mains">Main Courses</button>
+            <button class="menu-filter-btn ripple" data-filter="seafood">Seafood</button>
+            <button class="menu-filter-btn ripple" data-filter="grills">Grills</button>
+            <button class="menu-filter-btn ripple" data-filter="desserts">Desserts</button>
+            <button class="menu-filter-btn ripple" data-filter="beverages">Beverages</button>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-3 mt-lg-0">
+          <div class="menu-search-wrapper mb-0">
+            <div class="input-group">
+              <span class="input-group-text bg-transparent border-end-0 border" style="border-radius: 30px 0 0 30px; color: var(--text-muted);"><i class="fas fa-search"></i></span>
+              <input type="text" id="menu-search" class="form-control menu-search-input border-start-0" placeholder="Search dish name or description..." aria-label="Search food items">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="row g-4" id="menu-grid">
+        <!-- STARTERS -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="starters">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=500" alt="Vegetable Samosa">
+              <span class="card-badge bg-success">Vegetarian</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Vegetable Samosa</h3>
+              <p class="card-desc">Crisp fried pastry shells packed with tempered potatoes, sweet green peas, and fresh spices.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$6.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="starters" style="animation-delay: 0.1s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=500" alt="Paneer Tikka">
+              <span class="card-badge">Hot Seller</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Paneer Tikka</h3>
+              <p class="card-desc">Artisanal cottage cheese cubes skewered with bell peppers, onions, cooked in fire tandoor clay.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$10.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOUPS -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="soups" style="animation-delay: 0.2s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=500" alt="Tomato Basil Soup">
+              <span class="card-badge bg-success">Vegetarian</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Tomato Basil Soup</h3>
+              <p class="card-desc">Slow-simmered vine ripe tomatoes blended with organic cream and garnished with sweet basil leaves.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$7.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="soups" style="animation-delay: 0.3s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=500" alt="Hot & Sour Soup">
+              <span class="card-badge">Spicy</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Hot & Sour Soup</h3>
+              <p class="card-desc">Gourmet oriental clear soup loaded with tofu bits, exotic wood-ear mushrooms, bamboo, and vinegar.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$8.49</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SALADS -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="salads">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=500" alt="Caesar Salad">
+              <span class="card-badge bg-primary">Healthy</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Caesar Salad</h3>
+              <p class="card-desc">Crisp romaine lettuce, butter herb croutons, tossed with traditional rich Caesar dressing and Parmesan.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$9.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="salads" style="animation-delay: 0.1s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=500" alt="Greek Salad">
+              <span class="card-badge bg-success">Vegetarian</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Greek Salad</h3>
+              <p class="card-desc">Diced cucumbers, juicy cherry tomatoes, sliced kalamata olives, red onions, topped with Greek feta block.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$10.49</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN COURSES -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="mains" style="animation-delay: 0.2s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=500" alt="Chicken Biryani">
+              <span class="card-badge">Bestseller</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Chicken Biryani</h3>
+              <p class="card-desc">Basmati rice infused with luxury saffron, aromatic Indian spices, and tender marinated chicken thighs.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$18.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="mains" style="animation-delay: 0.3s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=500" alt="Butter Chicken">
+              <span class="card-badge">Classic</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Butter Chicken</h3>
+              <p class="card-desc">Tandoori grilled chicken chunks simmered in a rich, buttery, spiced sweet tomato cream sauce.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$16.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="mains">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=500" alt="Paneer Butter Masala">
+              <span class="card-badge bg-success">Vegetarian</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Paneer Butter Masala</h3>
+              <p class="card-desc">Traditional cottage cheese cubes cooked in rich spicy sweet tomato cashew-nut gravy.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$14.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEAFOOD -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="seafood" style="animation-delay: 0.1s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534080391025-09795d197a5b?q=80&w=500" alt="Seafood Platter">
+              <span class="card-badge">Premium</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Seafood Platter</h3>
+              <p class="card-desc">Charcoal-grilled lobster tail, jumbo tiger prawns, butter garlic scallops, and crispy calamari ringlets.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$34.50</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="seafood" style="animation-delay: 0.2s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=500" alt="Grilled Salmon">
+              <span class="card-badge bg-primary">Healthy</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Grilled Salmon</h3>
+              <p class="card-desc">Atlantic salmon fillet pan-seared with fresh rosemary, garlic, accompanied by seasonal asparagus.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$24.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRILLS -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="grills" style="animation-delay: 0.3s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500" alt="BBQ Steak">
+              <span class="card-badge">Chef Choice</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">BBQ Steak</h3>
+              <p class="card-desc">USDA choice Angus ribeye steak, flame-broiled with hickory barbecue sauce, served with skin-on potato wedges.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$28.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="grills">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=500" alt="Tandoori Chicken">
+              <span class="card-badge">Hot & Spicy</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Tandoori Chicken</h3>
+              <p class="card-desc">Whole bone-in chicken marinated in yogurt spice blend, roasted in traditional fire tandoori clay oven.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$15.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="desserts" style="animation-delay: 0.1s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=500" alt="Chocolate Lava Cake">
+              <span class="card-badge">Signature</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Chocolate Lava Cake</h3>
+              <p class="card-desc">Warm Belgian chocolate cake with a molten lava center, topped with gourmet vanilla bean ice cream scoop.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$8.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="desserts" style="animation-delay: 0.2s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=500" alt="Gulab Jamun">
+              <span class="card-badge bg-success">Vegetarian</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Gulab Jamun</h3>
+              <p class="card-desc">Traditional soft fried milk-solid balls soaked in rose-flavored cardamom syrup, served hot.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$6.49</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEVERAGES -->
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="beverages" style="animation-delay: 0.3s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?q=80&w=500" alt="Mango Lassi">
+              <span class="card-badge bg-success">Refreshing</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Mango Lassi</h3>
+              <p class="card-desc">Thick, sweet, refreshing cold yogurt beverage blended with premium Alphonso mango puree.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$4.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 menu-item-col animate slide-up show-anim" data-category="beverages">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=500" alt="Classic Mojito">
+              <span class="card-badge">Iced Cold</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Classic Mojito</h3>
+              <p class="card-desc">Chilled sparkling soda water infused with fresh key lime juice, crushed sugar crystals, and mint leaves.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$6.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section-padding pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-logo" href="index.html">
+            <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+          </a>
+          <p class="text-muted pe-lg-4">Experience unforgettable dining with authentic flavors and premium ingredients, crafted by culinary experts with love.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Starters</a></li>
+            <li><a href="menu.html">Main Courses</a></li>
+            <li><a href="menu.html">Seafood Platter</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+            <li><a href="menu.html">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="text-muted mb-4">Subscribe to our newsletter to receive updates on special events and menu offers.</p>
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Your Email Address" required aria-label="Email for newsletter">
+            <button class="btn" type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="current-year"></span> Royal Spice Restaurant. All Rights Reserved. Designed with Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

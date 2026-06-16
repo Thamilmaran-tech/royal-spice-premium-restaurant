@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Spice Restaurant | Fresh Ingredients, Authentic Taste</title>
+  <meta name="description" content="Experience unforgettable dining at Royal Spice Restaurant. We serve premium recipes prepared with the freshest organic ingredients in a modern, luxurious dining atmosphere.">
+  <meta name="keywords" content="Royal Spice Restaurant, luxury restaurant, authentic taste, chicken biryani, butter chicken, fine dining reservation, book table online">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Royal Spice Restaurant | Fresh Ingredients, Authentic Taste">
+  <meta property="og:description" content="Experience unforgettable dining at Royal Spice Restaurant. Book your table online today.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand animate slide-left show-anim" href="index.html">
+        <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+      </a>
+      <button class="navbar-toggler animate slide-right show-anim" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse animate fade-in show-anim" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-custom-accent ripple py-2 px-4" href="reservation.html">Book Table</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920');" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <span class="hero-tagline animate slide-up show-anim">Welcome to Royal Spice Restaurant</span>
+          <h1 class="hero-title animate slide-up show-anim" style="animation-delay: 0.1s;">Experience Culinary Luxury & Authentic Taste</h1>
+          <p class="hero-desc animate slide-up show-anim" style="animation-delay: 0.2s;">
+            We combine high-quality ingredients, fresh organic herbs, and years of master craftsmanship to deliver unforgettable dining moments.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start animate slide-up show-anim" style="animation-delay: 0.3s;">
+            <a href="reservation.html" class="btn btn-custom-primary ripple"><i class="fa-solid fa-calendar-check me-2"></i>Book a Table</a>
+            <a href="menu.html" class="btn btn-custom-secondary ripple"><i class="fa-solid fa-bowl-food me-2"></i>Explore Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about-summary" class="scroll-down">
+      Scroll Down
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </header>
+
+  <!-- About Summary Section -->
+  <section class="section-padding" id="about-summary">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="about-img-container position-relative animate slide-left show-anim">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800" alt="Kitchen Prep" class="img-fluid about-img mb-3">
+            <div class="about-experience">
+              <h3 class="mb-0 fw-bold">15+</h3>
+              <p class="mb-0 small">Years of Culinary Excellence</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 animate slide-right show-anim">
+          <div class="section-title text-start mb-4">
+            <span class="text-uppercase tracking-wider fw-semibold text-warning" style="font-size: 0.85rem; letter-spacing: 2px;">Our Legacy</span>
+            <h2 class="mt-2 text-capitalize mb-0">Crafting Unforgettable Indian & Continental Culinary Journeys</h2>
+          </div>
+          <p class="mb-4">
+            At Royal Spice, we believe that food is not just sustenance—it is an art form. Founded in 2011, our award-winning kitchen has consistently pushed the boundaries of gastronomy, blending traditional heritage recipes with state-of-the-art culinary technologies.
+          </p>
+          <p class="mb-4 text-muted">
+            Our mission is simple: sourced locally, created globally, and shared with community. Every herb, spice, and raw ingredient undergoes strict evaluation before securing a spot in our gourmet recipe formulations.
+          </p>
+          <div class="row g-4 mb-4">
+            <div class="col-sm-6 d-flex align-items-center">
+              <i class="fas fa-check-circle text-warning fs-4 me-3"></i>
+              <span>100% Fresh Organic Produce</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center">
+              <i class="fas fa-check-circle text-warning fs-4 me-3"></i>
+              <span>Highly Experienced Master Chefs</span>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-custom-primary ripple">Read Our Full Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-award stat-icon"></i>
+            <div class="stat-number" data-count="15" data-plus="true">0</div>
+            <div class="stat-title">Years Experience</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-utensils stat-icon"></i>
+            <div class="stat-number" data-count="50" data-plus="true">0</div>
+            <div class="stat-title">Menu Items</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-smile stat-icon"></i>
+            <div class="stat-number" data-count="10000" data-plus="true">0</div>
+            <div class="stat-title">Happy Customers</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <i class="fas fa-user-tie stat-icon"></i>
+            <div class="stat-number" data-count="25" data-plus="true">0</div>
+            <div class="stat-title">Professional Staff</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dishes Section -->
+  <section class="section-padding bg-light-section" id="featured-dishes">
+    <div class="container">
+      <div class="section-title">
+        <span class="text-uppercase tracking-wider fw-semibold text-warning" style="font-size: 0.85rem; letter-spacing: 2px;">Signature Recipes</span>
+        <h2>Featured Gourmet Dishes</h2>
+        <p>A handpicked selection of our kitchen's finest culinary creations designed to delight your senses.</p>
+      </div>
+      <div class="row g-4">
+        <!-- 1. Chicken Biryani -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=500" alt="Chicken Biryani">
+              <span class="card-badge">Bestseller</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Chicken Biryani</h3>
+              <p class="card-desc">Basmati rice infused with luxury saffron, aromatic Indian spices, and tender marinated chicken thighs.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted small ms-1">(4.9)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$18.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 2. Seafood Platter -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.1s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1534080391025-09795d197a5b?q=80&w=500" alt="Seafood Platter">
+              <span class="card-badge">Premium</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Seafood Platter</h3>
+              <p class="card-desc">Charcoal-grilled lobster tail, jumbo tiger prawns, butter garlic scallops, and crispy calamari ringlets.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted small ms-1">(4.8)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$34.50</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 3. Butter Chicken -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.2s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=500" alt="Butter Chicken">
+              <span class="card-badge">Classic</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Butter Chicken</h3>
+              <p class="card-desc">Tandoori grilled chicken chunks simmered in a rich, buttery, spiced sweet tomato cream sauce.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted small ms-1">(5.0)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$16.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 4. Grilled Salmon -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.3s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=500" alt="Grilled Salmon">
+              <span class="card-badge">Healthy</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Grilled Salmon</h3>
+              <p class="card-desc">Atlantic salmon fillet pan-seared with fresh rosemary, garlic, accompanied by seasonal asparagus.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted small ms-1">(4.7)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$24.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 5. Margherita Pizza -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=500" alt="Margherita Pizza">
+              <span class="card-badge">Vegetarian</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Margherita Pizza</h3>
+              <p class="card-desc">Napoli hand-tossed crust with fresh San Marzano tomato puree, buffalo mozzarella, and aromatic basil.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted small ms-1">(4.6)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$14.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 6. BBQ Steak -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.1s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500" alt="BBQ Steak">
+              <span class="card-badge">Chef Choice</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">BBQ Steak</h3>
+              <p class="card-desc">USDA choice Angus ribeye steak, flame-broiled with hickory barbecue sauce, served with skin-on potato wedges.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted small ms-1">(4.9)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$28.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 7. Pasta Alfredo -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.2s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=500" alt="Pasta Alfredo">
+              <span class="card-badge">Classic</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Pasta Alfredo</h3>
+              <p class="card-desc">Fettuccine pasta tossed in thick butter, heavy cream, aged Parmigiano-Reggiano, and garlic grilled chicken breasts.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <span class="text-muted small ms-1">(4.7)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$15.50</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 8. Chocolate Lava Cake -->
+        <div class="col-xl-3 col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.3s;">
+          <div class="restaurant-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=500" alt="Chocolate Lava Cake">
+              <span class="card-badge">Sweet End</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Chocolate Lava Cake</h3>
+              <p class="card-desc">Warm Belgian chocolate cake with a molten lava center, topped with gourmet vanilla bean ice cream scoop.</p>
+              <div class="rating-stars mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span class="text-muted small ms-1">(5.0)</span>
+              </div>
+            </div>
+            <div class="card-footer-custom">
+              <span class="card-price">$8.99</span>
+              <button class="btn btn-custom-accent ripple py-1 px-3 fs-7" aria-label="Add to cart"><i class="fas fa-cart-plus me-1"></i>Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="menu.html" class="btn btn-custom-primary ripple">View Entire Food Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers Section -->
+  <section class="section-padding bg-white-section" id="special-offers">
+    <div class="container">
+      <div class="section-title">
+        <span class="text-uppercase tracking-wider fw-semibold text-danger" style="font-size: 0.85rem; letter-spacing: 2px;">Limited Time Only</span>
+        <h2>Current Premium Dining Offers</h2>
+        <p>Hurry up and unlock these discount offers available for a limited duration.</p>
+      </div>
+
+      <!-- Countdown Timer Component -->
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center mb-5 animate zoom-in show-anim">
+          <div class="p-4 bg-light rounded-4 border">
+            <span class="text-uppercase text-muted fs-8 fw-semibold tracking-wider">Offers Expiry Countdown</span>
+            <div class="countdown-timer" id="countdown-timer" data-expiry="2026-06-25T00:00:00">
+              <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Mins</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Secs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Weekends Offer -->
+        <div class="col-md-6 col-lg-3 animate slide-up show-anim">
+          <div class="restaurant-card offer-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=500" alt="Weekend Brunch">
+              <span class="card-badge bg-danger">Save 20%</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Weekend Offer</h3>
+              <p class="card-desc">Get a 20% flat discount on all dinner tables booked for Saturday and Sunday slot events.</p>
+            </div>
+            <div class="card-footer-custom bg-transparent border-0 pt-0">
+              <span class="text-danger fw-semibold"><i class="far fa-clock me-1"></i>Ends Soon!</span>
+            </div>
+          </div>
+        </div>
+        <!-- Family Combo -->
+        <div class="col-md-6 col-lg-3 animate slide-up show-anim" style="animation-delay: 0.1s;">
+          <div class="restaurant-card offer-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1529543642868-f9a000c17482?q=80&w=500" alt="Family Feast">
+              <span class="card-badge bg-danger">Best Value</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Family Combo</h3>
+              <p class="card-desc">Feed up to 4 members with Biryani + Curry + Starter + Dessert + Beverages combo platter.</p>
+            </div>
+            <div class="card-footer-custom bg-transparent border-0 pt-0">
+              <span class="text-danger fw-semibold"><i class="far fa-clock me-1"></i>Ends Soon!</span>
+            </div>
+          </div>
+        </div>
+        <!-- Lunch Special -->
+        <div class="col-md-6 col-lg-3 animate slide-up show-anim" style="animation-delay: 0.2s;">
+          <div class="restaurant-card offer-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=500" alt="Lunch Box">
+              <span class="card-badge bg-danger">Only $12.99</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Lunch Special</h3>
+              <p class="card-desc">Healthy express lunch course including a protein main, side salad, and green juice.</p>
+            </div>
+            <div class="card-footer-custom bg-transparent border-0 pt-0">
+              <span class="text-danger fw-semibold"><i class="far fa-clock me-1"></i>Ends Soon!</span>
+            </div>
+          </div>
+        </div>
+        <!-- Happy Hour Discount -->
+        <div class="col-md-6 col-lg-3 animate slide-up show-anim" style="animation-delay: 0.3s;">
+          <div class="restaurant-card offer-card">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=500" alt="Cocktail Drinks">
+              <span class="card-badge bg-danger">1-For-1</span>
+            </div>
+            <div class="card-body-custom">
+              <h3 class="card-title-custom">Happy Hour</h3>
+              <p class="card-desc">Buy one get one free on all imported mocktails and custom craft beverages from 4PM to 7PM.</p>
+            </div>
+            <div class="card-footer-custom bg-transparent border-0 pt-0">
+              <span class="text-danger fw-semibold"><i class="far fa-clock me-1"></i>Ends Soon!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section-padding testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <span class="text-uppercase tracking-wider fw-semibold text-warning" style="font-size: 0.85rem; letter-spacing: 2px;">Guest Feedback</span>
+        <h2>What Our Customers Say</h2>
+        <p class="text-light-muted">We take pride in serving wonderful experiences. Read testimonials written by our diners.</p>
+      </div>
+
+      <!-- Testimonials Carousel -->
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        </div>
+        <div class="carousel-inner pb-5">
+          <!-- 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200" alt="Sophia Mitchell" class="testimonial-img">
+              <p class="testimonial-text">"The dining experience here was simply breathtaking. The chicken biryani had layers of intense flavors, and the golden luxury ambience made our wedding anniversary feel so magical."</p>
+              <h4 class="testimonial-author">Sophia Mitchell</h4>
+              <p class="testimonial-role">Gourmet Food Blogger</p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200" alt="David Miller" class="testimonial-img">
+              <p class="testimonial-text">"Outstanding service! We had a family dinner combo last weekend. The server was extremely polite and suggested matching wines. The butter chicken is the best in town."</p>
+              <h4 class="testimonial-author">David Miller</h4>
+              <p class="testimonial-role">Tech Lead, Google</p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200" alt="Aria Jenkins" class="testimonial-img">
+              <p class="testimonial-text">"As a strict vegetarian, finding gourmet options is tough. Royal Spice surprised me with their artisanal Margherita pizza and salads. 10/10 recommended!"</p>
+              <h4 class="testimonial-author">Aria Jenkins</h4>
+              <p class="testimonial-role">Professional Dancer</p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200" alt="Marcus Thompson" class="testimonial-img">
+              <p class="testimonial-text">"The seafood platter was unbelievably fresh. You can tell they use top-shelf ingredients. The chocolate lava cake with vanilla scoop was the perfect highlight."</p>
+              <h4 class="testimonial-author">Marcus Thompson</h4>
+              <p class="testimonial-role">Critique Writer</p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200" alt="Emma Watson" class="testimonial-img">
+              <p class="testimonial-text">"Beautiful location, elegant styling and exceptionally friendly service. Their reservation system was very straightforward. We received confirmation instantly."</p>
+              <h4 class="testimonial-author">Emma Watson</h4>
+              <p class="testimonial-role">Marketing Manager</p>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200" alt="Liam Carter" class="testimonial-img">
+              <p class="testimonial-text">"The chefs are true legends. The BBQ steak was cooked to medium-rare perfection. I visit almost every Friday for their Happy Hour beverages."</p>
+              <h4 class="testimonial-author">Liam Carter</h4>
+              <p class="testimonial-role">Entrepreneur</p>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200" alt="Olivia Brown" class="testimonial-img">
+              <p class="testimonial-text">"Wonderful environment. The acoustic lighting and background jazz music set a wonderful tone. We tried their Pasta Alfredo, and it was rich and silky."</p>
+              <h4 class="testimonial-author">Olivia Brown</h4>
+              <p class="testimonial-role">Interior Designer</p>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="carousel-item">
+            <div class="testimonial-item">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200" alt="Ethan Rodriguez" class="testimonial-img">
+              <p class="testimonial-text">"A complete 5-star experience. The food tastes genuine, the staff is very polished, and the pricing is very reasonable for the luxury level offered."</p>
+              <h4 class="testimonial-author">Ethan Rodriguez</h4>
+              <p class="testimonial-role">Event Organizer</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section-padding pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6 animate slide-up show-anim">
+          <a class="footer-logo" href="index.html">
+            <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+          </a>
+          <p class="text-muted pe-lg-4">Experience unforgettable dining with authentic flavors and premium ingredients, crafted by culinary experts with love.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 animate slide-up show-anim" style="animation-delay: 0.1s;">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 animate slide-up show-anim" style="animation-delay: 0.2s;">
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Starters</a></li>
+            <li><a href="menu.html">Main Courses</a></li>
+            <li><a href="menu.html">Seafood Platter</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+            <li><a href="menu.html">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 animate slide-up show-anim" style="animation-delay: 0.3s;">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="text-muted mb-4">Subscribe to our newsletter to receive updates on special events and menu offers.</p>
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Your Email Address" required aria-label="Email for newsletter">
+            <button class="btn" type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="current-year"></span> Royal Spice Restaurant. All Rights Reserved. Designed with Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

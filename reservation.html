@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Table | Royal Spice Restaurant</title>
+  <meta name="description" content="Reserve a table online at Royal Spice Restaurant. Choose your preferred date, time, and guest count for an exquisite dining experience.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-custom-accent ripple py-2 px-4" href="reservation.html">Book Table</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="section-padding bg-dark text-center text-white position-relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920') center/cover no-repeat; padding: 100px 0;">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-2">Book a Premium Table</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Reservation</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section class="section-padding bg-white-section">
+    <div class="container">
+      <div class="row g-5 align-items-stretch">
+        <!-- Guidelines column -->
+        <div class="col-lg-5 animate slide-left show-anim">
+          <div class="p-4 bg-light rounded-4 border h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="h3 mb-4 font-display text-warning">Dining Regulations</h2>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-clock text-warning mt-1 me-3"></i>
+                  <div>
+                    <strong>Grace Period:</strong> We hold reservations for a maximum of 15 minutes after the scheduled booking time.
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-tshirt text-warning mt-1 me-3"></i>
+                  <div>
+                    <strong>Dress Code:</strong> Smart casual or formal dining attire is requested for dinner services.
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-users text-warning mt-1 me-3"></i>
+                  <div>
+                    <strong>Large Groups:</strong> For parties larger than 10 guests, please contact us directly by telephone to coordinate custom catering menus.
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-baby text-warning mt-1 me-3"></i>
+                  <div>
+                    <strong>Family friendly:</strong> Infant high chairs and booster seats are available upon request.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="p-4 border rounded-3 text-center bg-card-custom" style="border-style: dashed !important;">
+              <h3 class="h5 mb-2"><i class="fas fa-phone-alt text-warning me-2"></i>Urgent Bookings</h3>
+              <p class="small text-muted mb-0">Need a table tonight in the next 2 hours? Call our hosting manager directly at: <br><strong>+1 (234) 567-8910</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="col-lg-7 animate slide-right show-anim">
+          <div class="reservation-card-wrapper">
+            <h2 class="h3 font-display mb-4">Reservation Booking Request</h2>
+            
+            <div id="reservation-alert"></div>
+
+            <form id="reservation-form" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <!-- Name -->
+                <div class="col-md-6">
+                  <label for="res-name" class="form-label-custom">Full Name *</label>
+                  <input type="text" class="form-control form-control-custom" id="res-name" required placeholder="E.g. Sophia Mitchell">
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="res-email" class="form-label-custom">Email Address *</label>
+                  <input type="email" class="form-control form-control-custom" id="res-email" required placeholder="Sophia@example.com">
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <!-- Phone -->
+                <div class="col-md-6">
+                  <label for="res-phone" class="form-label-custom">Phone Number *</label>
+                  <input type="tel" class="form-control form-control-custom" id="res-phone" required pattern="[0-9+()-\s]{9,15}" placeholder="E.g. +1 (555) 019-2834">
+                  <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+                <!-- Guests -->
+                <div class="col-md-6">
+                  <label for="res-guests" class="form-label-custom">Number of Guests *</label>
+                  <select class="form-select form-control-custom" id="res-guests" required>
+                    <option value="" disabled selected>Select guest count</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6 People</option>
+                    <option value="7">7 People</option>
+                    <option value="8">8 People</option>
+                    <option value="9">9 People</option>
+                    <option value="10">10 People</option>
+                    <option value="large">More than 10 (Call us)</option>
+                  </select>
+                  <div class="invalid-feedback">Please select the number of guests.</div>
+                </div>
+                <!-- Date -->
+                <div class="col-md-6">
+                  <label for="res-date" class="form-label-custom">Reservation Date *</label>
+                  <input type="date" class="form-control form-control-custom" id="res-date" required>
+                  <div class="invalid-feedback">Please select a future reservation date.</div>
+                </div>
+                <!-- Time -->
+                <div class="col-md-6">
+                  <label for="res-time" class="form-label-custom">Reservation Time Slot *</label>
+                  <select class="form-select form-control-custom" id="res-time" required>
+                    <option value="" disabled selected>Select time slot</option>
+                    <option value="11:30 AM">11:30 AM (Lunch)</option>
+                    <option value="12:30 PM">12:30 PM (Lunch)</option>
+                    <option value="01:30 PM">01:30 PM (Lunch)</option>
+                    <option value="02:30 PM">02:30 PM (Lunch)</option>
+                    <option value="05:30 PM">05:30 PM (Dinner)</option>
+                    <option value="06:30 PM">06:30 PM (Dinner)</option>
+                    <option value="07:30 PM">07:30 PM (Dinner)</option>
+                    <option value="08:30 PM">08:30 PM (Dinner)</option>
+                    <option value="09:30 PM">09:30 PM (Dinner)</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a dining time slot.</div>
+                </div>
+                <!-- Special Requests -->
+                <div class="col-12">
+                  <label for="res-requests" class="form-label-custom">Special Requests (Optional)</label>
+                  <textarea class="form-control form-control-custom" id="res-requests" rows="3" placeholder="E.g. Vegetarian preference, anniversary event, allergy warnings, outdoor patio seating preference..."></textarea>
+                </div>
+                <!-- Submit -->
+                <div class="col-12 mt-4 text-end">
+                  <button type="submit" class="btn btn-custom-primary ripple"><i class="fas fa-check me-2"></i>Book Table Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal fade" id="reservationConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reservationConfirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-start border-0 shadow-lg" style="border-radius: var(--border-radius); background-color: var(--card-bg); color: var(--text-color);">
+        <div class="modal-header border-bottom border-color" style="padding: 20px;">
+          <h5 class="modal-title font-display text-warning" id="reservationConfirmModalLabel"><i class="fas fa-concierge-bell me-2"></i>Verify Reservation Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="padding: 25px;">
+          <p class="text-muted small mb-4">Please review your booking details before sending request to our system:</p>
+          <div class="table-responsive">
+            <table class="table table-sm table-borderless text-color mb-0">
+              <tbody>
+                <tr>
+                  <th class="ps-0 py-2" style="width: 40%;">Guest Name:</th>
+                  <td id="confirm-name" class="py-2 fw-semibold">Sophia Mitchell</td>
+                </tr>
+                <tr>
+                  <th class="ps-0 py-2">Email:</th>
+                  <td id="confirm-email" class="py-2">Sophia@example.com</td>
+                </tr>
+                <tr>
+                  <th class="ps-0 py-2">Phone Number:</th>
+                  <td id="confirm-phone" class="py-2">+1 (555) 019-2834</td>
+                </tr>
+                <tr>
+                  <th class="ps-0 py-2">Date Selected:</th>
+                  <td id="confirm-date" class="py-2 text-warning fw-semibold">2026-06-25</td>
+                </tr>
+                <tr>
+                  <th class="ps-0 py-2">Time Slot:</th>
+                  <td id="confirm-time" class="py-2 text-warning fw-semibold">07:30 PM</td>
+                </tr>
+                <tr>
+                  <th class="ps-0 py-2">Guests Count:</th>
+                  <td id="confirm-guests" class="py-2">4 Guests</td>
+                </tr>
+                <tr>
+                  <th class="ps-0 py-2">Special Notes:</th>
+                  <td id="confirm-requests" class="py-2 text-muted small">Vegetarian preference</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer border-top border-color" style="padding: 20px;">
+          <button type="button" class="btn btn-secondary ripple py-2 px-3 rounded-pill" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-custom-primary ripple py-2 px-4" id="btn-confirm-booking">Confirm Booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="section-padding pb-4">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-logo" href="index.html">
+            <i class="fa-solid fa-utensils me-2"></i>Royal <span>Spice</span>
+          </a>
+          <p class="text-muted pe-lg-4">Experience unforgettable dining with authentic flavors and premium ingredients, crafted by culinary experts with love.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservation.html">Book a Table</a></li>
+            <li><a href="blog.html">Blog & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html">Starters</a></li>
+            <li><a href="menu.html">Main Courses</a></li>
+            <li><a href="menu.html">Seafood Platter</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+            <li><a href="menu.html">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="text-muted mb-4">Subscribe to our newsletter to receive updates on special events and menu offers.</p>
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Your Email Address" required aria-label="Email for newsletter">
+            <button class="btn" type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="current-year"></span> Royal Spice Restaurant. All Rights Reserved. Designed with Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
